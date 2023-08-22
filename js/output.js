@@ -1,4 +1,6 @@
- let data = [
+let favoriteProducts = [];
+
+let data = [
   {
     id: 1,
     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -9,7 +11,8 @@
     rating: {
       rate: 3.9,
       count: 120
-    }
+    },
+    isFavorite:false
   },
   {
     id: 2,
@@ -21,7 +24,8 @@
     rating: {
       rate: 4.1,
       count: 259
-    }
+    },
+    isFavorite:false
   },
   {
     id: 3,
@@ -33,7 +37,8 @@
     rating: {
       rate: 4.7,
       count: 500
-    }
+    },
+    isFavorite:false
   },
   {
     id: 4,
@@ -45,7 +50,8 @@
     rating: {
       rate: 2.1,
       count: 430
-    }
+    },
+    isFavorite:false
   },
   {
     id: 5,
@@ -57,7 +63,8 @@
     rating: {
       rate: 4.6,
       count: 400
-    }
+    },
+    isFavorite:false
   },
   {
     id: 6,
@@ -69,7 +76,8 @@
     rating: {
       rate: 3.9,
       count: 70
-    }
+    },
+    isFavorite:false
   },
   {
     id: 7,
@@ -81,7 +89,8 @@
     rating: {
       rate: 3,
       count: 400
-    }
+    },
+    isFavorite:false
   },
   {
     id: 8,
@@ -93,7 +102,8 @@
     rating: {
       rate: 1.9,
       count: 100
-    }
+    },
+    isFavorite:false
   },
   {
     id: 9,
@@ -105,7 +115,8 @@
     rating: {
       rate: 3.3,
       count: 203
-    }
+    },
+    isFavorite:false
   },
   {
     id: 10,
@@ -117,7 +128,8 @@
     rating: {
       rate: 2.9,
       count: 470
-    }
+    },
+    isFavorite:false
   },
   {
     id: 11,
@@ -129,7 +141,8 @@
     rating: {
       rate: 4.8,
       count: 319
-    }
+    },
+    isFavorite:false
   },
   {
     id: 12,
@@ -141,7 +154,8 @@
     rating: {
       rate: 4.8,
       count: 400
-    }
+    },
+    isFavorite:false
   },
   {
     id: 13,
@@ -153,7 +167,8 @@
     rating: {
       rate: 2.9,
       count: 250
-    }
+    },
+    isFavorite:false
   },
   {
     id: 14,
@@ -165,7 +180,8 @@
     rating: {
       rate: 2.2,
       count: 140
-    }
+    },
+    isFavorite:false
   },
   {
     id: 15,
@@ -177,7 +193,8 @@
     rating: {
       rate: 2.6,
       count: 235
-    }
+    },
+    isFavorite:false
   },
   {
     id: 16,
@@ -189,7 +206,8 @@
     rating: {
       rate: 2.9,
       count: 340
-    }
+    },
+    isFavorite:false
   },
   {
     id: 17,
@@ -201,7 +219,8 @@
     rating: {
       rate: 3.8,
       count: 679
-    }
+    },
+    isFavorite:false
   },
   {
     id: 18,
@@ -213,7 +232,8 @@
     rating: {
       rate: 4.7,
       count: 130
-    }
+    },
+    isFavorite:false
   },
   {
     id: 19,
@@ -225,7 +245,8 @@
     rating: {
       rate: 4.5,
       count: 146
-    }
+    },
+    isFavorite:false
   },
   {
     id: 20,

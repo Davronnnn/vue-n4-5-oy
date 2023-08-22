@@ -1,27 +1,39 @@
-function findElement(element, parent = document) {
-    return parent.querySelector(element);
+const elCards = findElement(".cards");
+let cachedFavorites = JSON.parse(localStorage.getItem("favorites"));
+
+let cachedData = JSON.parse(localStorage.getItem("products"));
+
+if(cachedData){
+    renderProducts(cachedData, elCards);
+}else{
+    renderProducts(data, elCards);
 }
 
-const elCards = findElement(".cards");
 
-data.forEach((element) => {
-    console.log(element);
+elCards.addEventListener("click", (evt) => {
+    if (evt.target.matches("path")) {
+        const id = Number(evt.target.dataset.id);
 
-    const newCard = document.createElement("div");
+        data = data.map((product) => {
+        
+            if (product.id === id) {
+                if (!product.isFavorite) {
+                    favoriteProducts.push(product);
+                }else{
+                   favoriteProducts = favoriteProducts.filter((element) => element.id !== id)
+                   
+                }
 
-    newCard.className = "col-3";
+                product.isFavorite = !product.isFavorite;
+            }
 
-    newCard.innerHTML = `
-        <div class="card">
-            <img class="card-img-top" src="${element.image}" alt="${element.title}" />
-            <div class="card-body">
-                <h5 class="card-title">${element.title}</h5>
-                <p class="card-text">${element.rating.rate} (${element.rating.count} baho)</p>
-                <p class="card-text">${element.price}</p>
-            </div>
-        </div>
-    `;
+            return product
+        });
+        renderProducts(data, elCards);
+        localStorage.setItem("products",JSON.stringify(data))
 
-    elCards.appendChild(newCard)
+        localStorage.setItem("favorites",JSON.stringify(favoriteProducts))
+    }
 
 });
+
