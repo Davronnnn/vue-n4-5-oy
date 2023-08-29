@@ -1,4 +1,3 @@
-let favoriteProducts = [];
 
 let data = [
   {

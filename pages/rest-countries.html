@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    </head>
+    <body>
+        <div class="container my-5">
+            <div id="loader" class="position-absolute top-50 start-50">
+                <div class="spinner-border text-center" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <input placeholder="Search..." class="my-5" type="search" name="" id="search-input" />
+
+                <select name="" id="continents">
+                    <option value="All">All</option>
+                    <option value="europe">europe</option>
+                    <option value="asia">asia</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Oceania">Oceania</option>
+                    <option value="Americas">Americas</option>
+                </select>
+            </div>
+
+            <div class="cards row"></div>
+
+            <template id="template">
+                <div class="col-3">
+                    <div class="card">
+                        <img class="card-img-top" src="" alt="" />
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text card-rate"></p>
+                            <span class="card-count"></span>
+                            <p class="card-text card-price"></p>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <script src="../js/helpers.js"></script>
+        <script src="../js/rest-countries.js"></script>
+        <script src="../js/lesson.js"></script>
+    </body>
+</html>
