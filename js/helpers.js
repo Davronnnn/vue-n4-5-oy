@@ -1,11 +1,16 @@
-function findElement(element, parent = document) {
+const test = "test";
+
+export default test;
+
+
+export function findElement(element, parent = document) {
     return parent.querySelector(element);
 }
 
 
 
-const templateProducts = findElement("#template-products");
-function renderProducts(products, parent) {
+export const templateProducts = findElement("#template-products");
+export function renderProducts(products, parent) {
     parent.innerHTML = null;
     const fragment = document.createDocumentFragment();
      products.forEach((element) => {
@@ -27,8 +32,8 @@ function renderProducts(products, parent) {
 
         img.src = element.image;
         title.textContent = element.title;
-        rate.textContent = element.rating.rate;
-        count.textContent = element.rating.count;
+        // rate.textContent = element.rating.rate;
+        // count.textContent = element.rating.count;
         price.textContent = element.price + "$";
        
         fragment.appendChild(newTemplate);

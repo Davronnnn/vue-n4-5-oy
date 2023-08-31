@@ -1,12 +1,17 @@
+import  {findElement,renderProducts} from "./helpers.js"
+
 const elCards = findElement(".cards");
 let favoriteProducts = [];
 let products = [];
 
-fetch("https://fakestoreapi.com/products")
+const BASE_URL = "https://64f0b0178a8b66ecf77a03ee.mockapi.io"
+
+fetch(BASE_URL+"/products")
     .then((res) => res.json())
     .then((res) => {
-        products = res;
-        renderProducts(products, elCards);
+        // products = res;
+        renderProducts(res, elCards);
+       
     })
     .catch((err) => {
         alert(err);
