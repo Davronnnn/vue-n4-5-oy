@@ -10,7 +10,7 @@ export function findElement(element, parent = document) {
 
 
 export const templateProducts = findElement("#template-products");
-export function renderProducts(products, parent) {
+export function renderProducts(products, parent, isAdmin) {
     parent.innerHTML = null;
     const fragment = document.createDocumentFragment();
      products.forEach((element) => {
@@ -22,6 +22,18 @@ export function renderProducts(products, parent) {
         const price = findElement(".card-price",newTemplate);
         const likePath1 = findElement(".like-path1",newTemplate);
         const likePath2 = newTemplate.querySelector(".like-path2");
+        const elLink = findElement("#link",newTemplate);
+
+
+        if(elLink){
+            elLink.href = `http://127.0.0.1:5500/pages/single.html?id=${element.id}`
+        }
+
+        if(isAdmin){
+             const editBtn  =  findElement(".btn-info", newTemplate);
+             editBtn.dataset.id = element.id
+        }
+       
 
         // likePath1.setAttribute("fill",element.isFavorite ? "#8967F0" :  "white")
         // likePath2.setAttribute("fill",element.isFavorite ? "none" :  "#15151A")

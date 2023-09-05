@@ -1,12 +1,12 @@
 import  {findElement,renderProducts} from "./helpers.js"
+import { BASE_URL } from "./utils.js";
 
 const elCards = findElement(".cards");
 let favoriteProducts = [];
 let products = [];
 
-const BASE_URL = "https://64f0b0178a8b66ecf77a03ee.mockapi.io"
 
-fetch(BASE_URL+"/products")
+fetch(BASE_URL +"/products")
     .then((res) => res.json())
     .then((res) => {
         // products = res;
@@ -17,10 +17,9 @@ fetch(BASE_URL+"/products")
         alert(err);
     });
 
-
-
-
 renderProducts(products, elCards);
+
+
 
 // elCards.addEventListener("click", (evt) => {
 //     if (evt.target.matches("path")) {
