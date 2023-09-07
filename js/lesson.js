@@ -4,10 +4,14 @@ const person = {
     age: 30
 };
 
+const numbers = [1,2,3,];
+numbers.push("test")
 
+const numbers2 = [...numbers]; // shallow copy
 
+console.log(numbers) // 1 2 3 test
+console.log(numbers2) // 1 2 3 test
 
-// const name =  "salom";
 
 
 
