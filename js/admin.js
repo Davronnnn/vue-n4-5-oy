@@ -8,6 +8,16 @@ const elImage = findElement("#image");
 
 const BASE_URL = "https://64f0b0178a8b66ecf77a03ee.mockapi.io";
 
+const token = localStorage.getItem("token");
+
+if(!token){
+    window.location.replace("http://127.0.0.1:5500/index.html")
+}
+
+
+
+
+
 fetch(BASE_URL + "/products")
     .then((res) => res.json())
     .then((res) => {

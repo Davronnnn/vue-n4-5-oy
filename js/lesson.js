@@ -1,68 +1,52 @@
-const person = {
-    name : "John",
-    surName: "Doe",
-    age: 30
-};
+const obj ={
+    name: "tesla model y",
+    color: "mokriy asfalt",
+    speed: 200,
+    findType(){
+        console.log(this)
+        if(this.speed > 180){
+            return "turbo"
+        }else{
+            return "econom"
+        }
+    },
+    asd: () =>{
+        console.log(this)
+       
+    }
+}
 
-const numbers = [1,2,3,];
-numbers.push("test")
+const obj2 ={
+    name: "tesla model x",
+    color: "chocolate",
+    speed: 200,
+    findType(){
+        if(this.speed > 180){
+            return "turbo"
+        }else{
+            return "econom"
+        }
+    }
+}
 
-const numbers2 = [...numbers]; // shallow copy
+console.log(obj.findType())
+console.log(obj.asd())
+// const  a = obj.findType()
+// const b = obj2.findType()
 
-console.log(numbers) // 1 2 3 test
-console.log(numbers2) // 1 2 3 test
-
-
-
-
-// const {name : name2 ,surName,age} = person;
-
-// console.log(name2)
-
-
-
-// const name = person.name
-// const surName = person.surName
-// const age = person.age;
-
-// destrcuture
-
-// const [raqam2,raqam1,raqam3] = array;
-
-// // spread operator
-// const obj2 = {
-//     addres: "Tashkent",
-//     // name : person.name,
-//     // age: person.age,
-//     // surName: person.surName
-//     ...person
-// };
-
+// const { findType } = obj
+// const { findType: findType2 } = obj2
 
 
+// console.log(findType())
+// console.log(findType2())
 
-// // rest
+// function test(){
+//     console.log(this)
+// }
 
-// // const [elem1,elem2, ...others] = array;
-// // const array = [1,2,3,4,5,6,7,8,9,10];
-
-// // function sumNumber(num1,num2, ...args){
-
-// //     return num1
-// // }
-// // sumNumber(1,2,3,4,5,6,7,8,9,10)
-// // console.log(...array)
-
-// let arr = ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000];
-
-// // let name    = arr[0];
-// // let surname = arr[1];
-
-// // let info = arr.slice(2); // 2 chi elementdan boshlab xammasi
-
-// let [name,surName, ...rest] = arr;
-
-// console.log(rest)
-
-
-
+// test()
+// const a = () => {
+//     console.log(this)
+// }
+// a()
