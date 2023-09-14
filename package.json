@@ -1,0 +1,29 @@
+{
+  "name": "vue-n4-5-oy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel js -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davronnnn/vue-n4-5-oy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Davronnnn/vue-n4-5-oy/issues"
+  },
+  "homepage": "https://github.com/Davronnnn/vue-n4-5-oy#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.22.15",
+    "@babel/core": "^7.22.17",
+    "@babel/preset-env": "^7.22.15"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.18.6"
+  }
+}

@@ -12,7 +12,6 @@ const API = "https://api.openweathermap.org/data/2.5/weather";
 const elForm = findElement("#form");
 const cards = findElement(".cards");
 const template = findElement("#template").content;
-
 class Weather {
     renderCity(data, template, cards) {
         cards.innerHTML = null;
